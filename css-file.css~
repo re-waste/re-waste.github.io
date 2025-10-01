@@ -1,0 +1,164 @@
+/* Rewaste Organization Website Styles */
+
+:root {
+    /* Brand Colors */
+    --brand-primary: #2d7a3e;
+    --brand-secondary: #4a9d5f;
+    --brand-accent: #6bc47f;
+    
+    /* Grayscale */
+    --gray-0: #0f0f11;
+    --gray-1: #16161a;
+    --gray-2: #242428;
+    --gray-3: #4c4c50;
+    --gray-4: #828286;
+    --gray-5: #959597;
+    --gray-6: #c3c3c4;
+    --gray-7: #dbdbdc;
+    --gray-8: #eaeaeb;
+    --gray-9: #f0f0f4;
+    
+    /* Semantic Colors */
+    --background: #ffffff;
+    --text-primary: var(--gray-1);
+    --text-secondary: var(--gray-4);
+    --border-color: var(--gray-7);
+    --link-color: var(--brand-primary);
+    --link-hover: var(--brand-secondary);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--gray-1);
+        --text-primary: var(--gray-9);
+        --text-secondary: var(--gray-6);
+        --border-color: var(--gray-3);
+    }
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background);
+    max-width: 100vw;
+    padding: 2rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    color: var(--brand-primary);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    border-bottom: 3px solid var(--brand-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Main Content Container */
+.main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(109, 196, 127, 0.05) 0%, rgba(45, 122, 62, 0.05) 100%);
+    border-left: 4px solid var(--brand-primary);
+    border-radius: 8px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Information */
+.contact {
+    background-color: var(--brand-primary);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.contact a {
+    color: var(--brand-accent);
+    font-weight: 600;
+}
+
+/* Scribble-specific Classes */
+.STitle {
+    color: var(--brand-primary);
+}
+
+.SIntrapara {
+    margin-bottom: 1rem;
+}
+
+/* Selection Highlight */
+::selection {
+    background: color-mix(in srgb, var(--brand-primary) 40%, transparent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .main {
+        padding: 1rem;
+    }
+}
